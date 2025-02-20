@@ -19,6 +19,16 @@ app.use(express.json());
 let avisos = []; // Lista de avisos armazenados
 let eventos = []; // Lista de eventos armazenados
 
+// Rota para buscar os avisos via HTTP
+app.get("/avisos", (req, res) => {
+  res.json(avisos);
+});
+
+// Rota para buscar os eventos via HTTP
+app.get("/eventos", (req, res) => {
+  res.json(eventos);
+});
+
 // Conectar ao WebSocket
 io.on("connection", (socket) => {
   console.log("Novo usuário conectado:", socket.id);
