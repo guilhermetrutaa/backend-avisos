@@ -20,12 +20,12 @@ let avisos = []; // Lista de avisos armazenados
 let eventos = []; // Lista de eventos armazenados
 
 // Rota para buscar os avisos via HTTP
-app.get("/", (req, res) => {
+app.get("/avisos", (req, res) => {
   res.json(avisos);
 });
 
 // Rota para buscar os eventos via HTTP
-app.get("/", (req, res) => {
+app.get("/eventos", (req, res) => {
   res.json(eventos);
 });
 
